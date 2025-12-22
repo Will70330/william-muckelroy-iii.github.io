@@ -18,7 +18,7 @@ function determineGiscusTheme() {
 
   let giscusAttributes = {
     src: "https://giscus.app/client.js",
-    "data-repo": "Will70330/william-muckelroy-iii",
+    "data-repo": "Will70330/william-muckelroy-iii.github.io",
     "data-repo-id": "",
     "data-category": "Comments",
     "data-category-id": "",
