@@ -1,0 +1,42 @@
+# -----------------------------------------------------------------------------
+# AFFILIATION LOGOS
+# -----------------------------------------------------------------------------
+# Small, hyperlinked logos shown between your name and bio on the About page,
+# in the order listed here (left to right). Files live in assets/img/logos/.
+#
+#   name:  accessible label / tooltip   (required)
+#   url:   where the logo links to       (required — placeholders for now)
+#   image: path to the logo              (required)
+# -----------------------------------------------------------------------------
+
+- name: University of Pittsburgh
+  url: https://www.engineering.pitt.edu/
+  image: assets/img/logos/pitt.png
+
+- name: MPRW
+  url: https://www.indyautonomouschallenge.com/mit-pitt-rw
+  image: assets/img/logos/mprw.png
+  dark_image: assets/img/logos/mprw_dark.png
+  scale: 0.66 # very wide wordmark — render a bit smaller than the others
+
+- name: Tesla
+  url: https://www.tesla.com/AI
+  image: assets/img/logos/tesla.png
+
+- name: Google Labs
+  url: https://labs.google/
+  image: assets/img/logos/google.png
+  dark_image: assets/img/logos/google_dark.png
+
+- name: Amazon Lab126
+  url: https://www.amazon.com/Introducing-Amazon-Astro/dp/B078NSDFSB
+  image: assets/img/logos/amazon_lab126.png
+  dark_image: assets/img/logos/amazon_lab126_dark.png
+
+- name: Carnegie Mellon University
+  url: https://www.ri.cmu.edu/
+  image: assets/img/logos/cmu_logo.png
+
+- name: Stanford University
+  url: https://ai.stanford.edu/
+  image: assets/img/logos/stanford.png

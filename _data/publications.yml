@@ -1,0 +1,52 @@
+# -----------------------------------------------------------------------------
+# PUBLICATIONS
+# -----------------------------------------------------------------------------
+# Listed in the order they appear here (put newest first). No search/filter UI.
+#
+# Each entry supports:
+#   title:       paper title                                   (required)
+#   authors:     author string; wrap your own name in **..**   (required)
+#                to bold it, e.g. "A. Author, **William Muckelroy III**, B. Author"
+#   venue:       status or venue line                          (required)
+#                e.g. "In Preparation for Submission to ICRA'27"
+#                     "In IEEE/RSJ IROS, 2026"
+#   image:       thumbnail or GIF                              (optional)
+#   coming_soon: true to show a "Coming Soon…" tag             (optional)
+#   links:       any subset of the following; blank/omitted    (optional)
+#                ones are simply not shown:
+#                  bib | paper | video | code | poster | website
+# -----------------------------------------------------------------------------
+
+- title: A Placeholder Title for Your Most Recent Robotics Paper
+  authors: "**William Muckelroy III**, A. Coauthor, B. Coauthor, C. Advisor"
+  venue: In Preparation for Submission to ICRA'27
+  image: https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3gwbWF5dWY2MW5xeXZucG12b3didm1zMXAwaWR0aGFvdGN2NHBwYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sthmCnCpfr8M8jtTQy/giphy.gif
+  coming_soon: true
+
+- title: Another Placeholder Paper on Learning-Based Perception
+  authors: "A. Coauthor, **William Muckelroy III**, D. Advisor"
+  venue: In IEEE International Conference on Intelligent Robots and Systems (IROS), 2026
+  image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
+  links:
+    paper: https://google.com
+    code: https://google.com
+    video: https://google.com
+    bib: https://google.com
+
+- title: A Placeholder Workshop Paper on Robot Learning
+  authors: "**William Muckelroy III**, E. Coauthor"
+  venue: In CoRL Workshop on Placeholder Topics, 2025
+  image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
+  links:
+    paper: https://google.com
+    poster: https://google.com
+    website: https://google.com
+
+- title: An Earlier Placeholder Publication From Your Undergraduate Research
+  authors: "F. Advisor, **William Muckelroy III**, G. Coauthor"
+  venue: In Placeholder Journal of Robotics, 2024
+  image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
+  links:
+    paper: https://google.com
+    bib: https://google.com
+    code: https://google.com

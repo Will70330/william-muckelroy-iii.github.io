@@ -1,0 +1,84 @@
+# -----------------------------------------------------------------------------
+# ABOUT-PAGE TIMELINE
+# -----------------------------------------------------------------------------
+# A concise, scrollable "journey" of milestones shown on the About page.
+# The first `site.about_timeline_initial` items (see _pages/about.md) are shown,
+# and a "See more" button reveals the rest in batches.
+#
+# Each entry supports:
+#   date:   short label shown on the left            (required)
+#   title:  one-line description of the milestone     (required)
+#   image:  thumbnail/GIF shown beside the entry       (optional)
+#   url:    link the entry points to                   (optional)
+#
+# Placeholders below use the dummy image/GIF you provided — replace freely.
+# Add real thumbnails to assets/img/ and point `image:` at them later.
+# -----------------------------------------------------------------------------
+
+- date: August 2025
+  title: >
+    Presented as the final keynote speaker for the closing ceremony of Carnegie
+    Mellon University's (CMU) Robotics Institute Summer Scholars (RISS) program.
+  image: https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3gwbWF5dWY2MW5xeXZucG12b3didm1zMXAwaWR0aGFvdGN2NHBwYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sthmCnCpfr8M8jtTQy/giphy.gif
+  url: https://google.com
+
+- date: June 2025
+  title: >
+    Joined Carnegie Mellon University under the DRIVE Lab as part of CMU's
+    Robotics Institute Summer Scholars (RISS) program.
+  image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
+  url: https://google.com
+
+- date: May 2025
+  title: >
+    Received a placeholder award for outstanding undergraduate research. Replace
+    this text with a real milestone.
+  image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
+
+- date: March 2025
+  title: >
+    Presented a placeholder poster at a placeholder undergraduate research
+    symposium.
+  image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
+  url: https://google.com
+
+- date: January 2025
+  title: >
+    Began a placeholder research assistantship in a placeholder robotics lab.
+  image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
+
+- date: September 2024
+  title: >
+    Started a placeholder leadership role in a placeholder student organization.
+  image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
+
+- date: June 2024
+  title: >
+    Completed a placeholder summer internship at a placeholder company.
+  image: https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3gwbWF5dWY2MW5xeXZucG12b3didm1zMXAwaWR0aGFvdGN2NHBwYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sthmCnCpfr8M8jtTQy/giphy.gif
+  url: https://google.com
+
+- date: March 2024
+  title: >
+    Earned a placeholder scholarship recognizing placeholder achievement.
+  image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
+
+- date: December 2023
+  title: >
+    Placeholder milestone — describe a project, publication, or competition here.
+  image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
+
+- date: August 2023
+  title: >
+    Placeholder milestone — another step in the journey worth remembering.
+  image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
+
+- date: May 2023
+  title: >
+    Placeholder milestone — the beginning of the story you want to tell.
+  image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
+
+- date: September 2022
+  title: >
+    Started at a placeholder university / program — the earliest entry.
+  image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s

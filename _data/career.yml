@@ -1,0 +1,74 @@
+# -----------------------------------------------------------------------------
+# CAREER
+# -----------------------------------------------------------------------------
+# The full journey (the About timeline expanded into blog-style entries where
+# you can go into as much depth as you like). Listed newest first.
+#
+# Each entry supports:
+#   date:        date or range label                            (required)
+#   title:       role / event title                             (required)
+#   org:         organization / affiliation                     (optional)
+#   logo:        small logo shown with the entry                (optional)
+#   image:       larger thumbnail / GIF for the entry            (optional)
+#   description: full markdown description (multi-paragraph ok)  (required)
+#   links:       any subset: website | code | paper | video ... (optional)
+# -----------------------------------------------------------------------------
+
+- date: August 2025
+  title: RISS Closing Keynote Speaker
+  org: Carnegie Mellon University — Robotics Institute
+  logo: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
+  image: https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3gwbWF5dWY2MW5xeXZucG12b3didm1zMXAwaWR0aGFvdGN2NHBwYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sthmCnCpfr8M8jtTQy/giphy.gif
+  description: >
+    Placeholder, in-depth description of being selected as the final keynote
+    speaker for the closing ceremony of CMU's Robotics Institute Summer Scholars
+    program. This is your space to expand well beyond the one-line About
+    timeline — talk about the journey that led here, what you presented, and the
+    lessons you took away. Markdown works, so you can use **bold**, *italics*,
+    and [links](https://google.com).
+  links:
+    website: https://google.com
+    video: https://google.com
+
+- date: June 2025 – August 2025
+  title: Robotics Institute Summer Scholar (RISS)
+  org: Carnegie Mellon University — DRIVE Lab
+  logo: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
+  image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
+  description: >
+    Placeholder description of joining CMU under the DRIVE Lab as part of the
+    RISS program. Describe the research problem you worked on, the methods and
+    tools you used, your mentors, and the outcomes. Add as much detail as you'd
+    like here — this section is meant to hold what your CV and About page can't.
+  links:
+    website: https://google.com
+    code: https://google.com
+
+- date: January 2025 – May 2025
+  title: Undergraduate Research Assistant
+  org: Placeholder University — Placeholder Lab
+  logo: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
+  image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
+  description: >
+    Placeholder description of a research assistantship. Replace with the real
+    project scope, your contributions, and results.
+
+- date: Summer 2024
+  title: Placeholder Internship
+  org: Placeholder Company
+  logo: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
+  image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
+  description: >
+    Placeholder description of a summer internship. What team were you on, what
+    did you build, and what did you learn?
+  links:
+    website: https://google.com
+
+- date: September 2022 – Present
+  title: B.S. in Placeholder Major
+  org: Placeholder University
+  logo: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
+  image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
+  description: >
+    Placeholder description of your undergraduate studies — major, focus areas,
+    honors, and activities. This is the earliest entry in the journey.

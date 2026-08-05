@@ -2,79 +2,127 @@
 layout: default
 ---
 <div class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      {% if site.title == 'blank' %}
-        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-        {{ site.last_name }}
-      {% else %}
-        {{ site.title }}
-      {% endif %}
-    </h1>
-    <p class="desc">{{ page.subtitle }}</p>
-  </header>
-
-  <article>
-    {% if page.profile %}
-      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
-        {% if page.profile.image %}
-          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-          {% if page.profile.image_circular %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
+  <article class="about">
+    <!-- ===================== HEADER: intro + photo ===================== -->
+    <div class="about-header">
+      <!-- Left column: name, logos, bio, socials -->
+      <div class="about-intro">
+        <h1 class="about-name">
+          {% if site.title == 'blank' %}
+            <span class="font-weight-bold">{{ site.first_name }}</span>{% if site.middle_name %} {{ site.middle_name }}{% endif %} {{ site.last_name }}
           {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1
-      rounded' %}
+            {{ site.title }}
           {% endif %}
-          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
-      30vw, 95vw"{% endcapture %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-            cache_bust=true
-          %}
+        </h1>
+
+        {% if page.subtitle %}
+          <p class="about-subtitle">{{ page.subtitle }}</p>
         {% endif %}
-        {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
+
+        <!-- Affiliation logos (hyperlinked) -->
+        {% if site.data.logos and site.data.logos.size > 0 %}
+          <div class="about-logos">
+            {% for logo in site.data.logos %}
+              <a
+                class="about-logo"
+                href="{{ logo.url }}"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="{{ logo.name }}"
+                aria-label="{{ logo.name }}"
+                {% if logo.scale %}style="--logo-scale: {{ logo.scale }}"{% endif %}
+              >
+                <img class="logo-light" src="{{ logo.image }}" alt="{{ logo.name }}" loading="lazy" />
+                <img class="logo-dark" src="{{ logo.dark_image | default: logo.image }}" alt="{{ logo.name }}" loading="lazy" />
+              </a>
+            {% endfor %}
+          </div>
+        {% endif %}
+
+        <!-- Bio (markdown body of _pages/about.md) -->
+        <div class="about-bio">{{ content }}</div>
+
+        <!-- Social icons -->
+        {% if page.social %}
+          <div class="about-social">
+            <div class="contact-icons">{% include social.liquid %}</div>
+            {% if site.contact_note %}
+              <div class="contact-note">{{ site.contact_note }}</div>
+            {% endif %}
+          </div>
         {% endif %}
       </div>
-    {% endif %}
 
-    <div class="clearfix">{{ content }}</div>
+      <!-- Right column: rotating profile photo -->
+      {% if page.profile %}
+        <div class="about-photo">
+          {% assign profile_images = page.profile.images %}
+          {% if profile_images == nil or profile_images.size == 0 %}
+            {% assign profile_images = page.profile.image | split: '|' %}
+          {% endif %}
+          {% assign wide_images = page.profile.wide_images %}
+          <div
+            class="profile-rotator{% if page.profile.image_circular %} is-circular{% endif %}"
+            data-interval="{{ page.profile.rotate_interval | default: 4500 }}"
+          >
+            {% for img in profile_images %}
+              {% assign img_clean = img | strip %}
+              <img
+                class="profile-rotator-img{% if forloop.first %} is-active{% endif %}"
+                src="{{ img_clean | prepend: '/assets/img/' | relative_url }}"
+                alt="{{ site.first_name }} {{ site.last_name }}"
+                loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
+                {% if wide_images and wide_images contains img_clean %}data-wide="true"{% endif %}
+              />
+            {% endfor %}
+          </div>
+          {% if page.profile.more_info %}
+            <div class="more-info">{{ page.profile.more_info }}</div>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
 
-    <!-- News -->
-    {% if page.announcements and page.announcements.enabled %}
-      <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
-      </h2>
-      {% include news.liquid limit=true %}
-    {% endif %}
-
-    <!-- Latest posts -->
-    {% if page.latest_posts and page.latest_posts.enabled %}
-      <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
-      </h2>
-      {% include latest_posts.liquid %}
-    {% endif %}
-
-    <!-- Selected papers -->
-    {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
-      </h2>
-      {% include selected_papers.liquid %}
-    {% endif %}
-
-    <!-- Social -->
-    {% if page.social %}
-      <div class="social">
-        <div class="contact-icons">{% include social.liquid %}</div>
-
-        <div class="contact-note">{{ site.contact_note }}</div>
-      </div>
-    {% endif %}
-
-    {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
-      {% include newsletter.liquid center=true %}
+    <!-- ===================== TIMELINE / JOURNEY ===================== -->
+    {% if site.data.timeline and site.data.timeline.size > 0 %}
+      {% assign timeline_initial = page.timeline_initial | default: 7 %}
+      {% assign timeline_batch = page.timeline_batch | default: 5 %}
+      {% assign timeline_total = site.data.timeline | size %}
+      <section class="timeline-section">
+        <h2 class="section-title">{{ page.timeline_title | default: 'Journey' }}</h2>
+        <ol class="timeline" data-initial="{{ timeline_initial }}" data-batch="{{ timeline_batch }}">
+          {% for item in site.data.timeline %}
+            <li class="timeline-item{% if forloop.index > timeline_initial %} is-collapsed{% endif %}">
+              <span class="timeline-marker" aria-hidden="true"></span>
+              {% if item.image %}
+                <div class="timeline-media">
+                  {% if item.url %}<a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{% endif %}
+                  <img src="{{ item.image }}" alt="{{ item.date }}" loading="lazy" />
+                  {% if item.url %}</a>{% endif %}
+                </div>
+              {% endif %}
+              <div class="timeline-content">
+                <span class="timeline-date">{{ item.date }}</span>
+                <p class="timeline-title">
+                  {% if item.url %}
+                    <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.title | strip_newlines }}</a>
+                  {% else %}
+                    {{ item.title | strip_newlines }}
+                  {% endif %}
+                </p>
+              </div>
+            </li>
+          {% endfor %}
+        </ol>
+        {% if timeline_total > timeline_initial %}
+          <div class="timeline-more-wrap">
+            <button type="button" class="timeline-more">
+              See more
+              <span class="timeline-more-count">(+{{ timeline_total | minus: timeline_initial }})</span>
+            </button>
+          </div>
+        {% endif %}
+      </section>
     {% endif %}
   </article>
 </div>

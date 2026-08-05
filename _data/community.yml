@@ -1,0 +1,60 @@
+# -----------------------------------------------------------------------------
+# COMMUNITY
+# -----------------------------------------------------------------------------
+# A series of mini blog-posts about outreach, mentorship, talks, service, etc.
+# Listed in the order they appear here (newest first is conventional).
+#
+# Each entry supports:
+#   title:  post title                                          (required)
+#   date:   short date label                                    (optional)
+#   blurb:  paragraph description (markdown allowed)            (required)
+#   media:  one visual per post                                 (optional)
+#             type: image | gif | video | link
+#             src:  URL/path (image/gif/video) or link URL
+#             alt:  alt text (image/gif)
+#   link:   optional "read more" / external article URL         (optional)
+# -----------------------------------------------------------------------------
+
+- title: Keynote at the RISS Closing Ceremony
+  date: August 2025
+  media:
+    type: gif
+    src: https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3gwbWF5dWY2MW5xeXZucG12b3didm1zMXAwaWR0aGFvdGN2NHBwYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sthmCnCpfr8M8jtTQy/giphy.gif
+    alt: Placeholder animation
+  blurb: >
+    Placeholder blurb about giving the closing keynote for CMU RISS. Share what
+    the talk was about, who was in the audience, and what it meant to you. This
+    is a great place to add a couple of sentences of reflection that wouldn't
+    fit on the About timeline.
+  link: https://google.com
+
+- title: Mentoring Placeholder Students in Robotics
+  date: 2024 – 2025
+  media:
+    type: image
+    src: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
+    alt: Placeholder image
+  blurb: >
+    Placeholder blurb describing a mentorship or outreach program you were part
+    of. Describe your role, the impact, and anything you're proud of. Replace
+    this text and swap in a real photo.
+
+- title: Placeholder Talk / Panel / Workshop
+  date: 2024
+  media:
+    type: link
+    src: https://google.com
+  blurb: >
+    Placeholder blurb for a community talk, panel, or workshop. Use the `link`
+    media type to point at an external write-up, or switch to an image/video.
+  link: https://google.com
+
+- title: Volunteering With a Placeholder Community Organization
+  date: 2023
+  media:
+    type: image
+    src: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
+    alt: Placeholder image
+  blurb: >
+    Placeholder blurb about volunteer work or community service. Explain what
+    you did and why it mattered.
