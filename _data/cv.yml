@@ -1,97 +1,77 @@
+# -----------------------------------------------------------------------------
+# CV DATA  (rendered by _layouts/cv.liquid on the /cv/ page)
+# -----------------------------------------------------------------------------
+# Supported section types: map | time_table | nested_list | list
+# This is placeholder content — replace with your real CV, or upload a PDF and
+# point `cv_pdf` in _pages/cv.md at it (the PDF button appears in the heading).
+# -----------------------------------------------------------------------------
+
 - title: General Information
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
-    - name: Languages
-      value: English, German
+      value: William Muckelroy III
+    - name: Field
+      value: Robotics · Placeholder subfield
+    - name: Email
+      value: you@example.com
+    - name: Website
+      value: william-muckelroy-iii.com
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: B.S. in Placeholder Major
+      institution: Placeholder University
+      year: 2022 - Present
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
-      description:
-        - Description 1.
-        - Description 2.
+        - Placeholder honor or GPA line.
+        - Relevant coursework, awards, or activities.
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Robotics Institute Summer Scholar (RISS)
+      institution: Carnegie Mellon University — DRIVE Lab
+      year: 2025
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+        - Placeholder description of your RISS research project.
+        - Closed the program as the final keynote speaker.
+    - title: Placeholder Research Assistant
+      institution: Placeholder University — Placeholder Lab
+      year: 2025
       description:
-        - Description 1.
-        - Description 2.
-
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
+        - Placeholder description of responsibilities and results.
+    - title: Placeholder Internship
+      institution: Placeholder Company
+      year: 2024
       description:
-
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
-  type: time_table
-  contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+        - Placeholder description of the internship.
 
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 1921
+    - year: 2025
       items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
+        - Placeholder Award One
+        - Placeholder Award Two
+    - year: 2024
       items:
-        - Max Planck Medal
+        - Placeholder Scholarship
 
-- title: Academic Interests
+- title: Skills
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Programming
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - Python, C++
+        - ROS / ROS 2
+    - title: Robotics
       items:
-        - Description 1.
-        - Description 2.
+        - Perception, planning, control (placeholder)
+        - Machine learning (placeholder)
 
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - <u>Hobbies:</u> Placeholder hobby 1, placeholder hobby 2.

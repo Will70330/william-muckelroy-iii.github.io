@@ -1,0 +1,803 @@
+/*******************************************************************************
+ * Portfolio custom styles
+ * About header, timeline, publications, community, and career sections.
+ * All colors come from the theme's CSS variables so light/dark mode "just works".
+ ******************************************************************************/
+
+/* Shared section heading -------------------------------------------------- */
+.section-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 2.5rem 0 1.5rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+/* ========================================================================== */
+/* ABOUT — header (intro + rotating photo)                                    */
+/* ========================================================================== */
+.about-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-intro {
+  flex: 1 1 320px;
+  min-width: 0;
+}
+
+.about-name {
+  font-size: 2.6rem;
+  line-height: 1.1;
+  margin: 0 0 0.4rem;
+  font-weight: 300;
+
+  .font-weight-bold {
+    font-weight: 700;
+  }
+}
+
+.about-subtitle {
+  color: var(--global-text-color-light);
+  font-size: 1.05rem;
+  margin: 0 0 1.2rem;
+}
+
+/* Affiliation logos */
+.about-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.7rem 0.8rem; // row-gap  column-gap
+  padding: 1rem 0 1.2rem;
+  margin-bottom: 1.2rem;
+  border-top: 1px solid var(--global-divider-color);
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+.about-logo {
+  display: inline-flex;
+  align-items: center;
+
+  img {
+    // Uniform height for every logo (images are pre-trimmed of whitespace,
+    // so equal height reads as equal size). Per-logo `scale` (from logos.yml)
+    // shrinks very wide wordmarks like MPRW.
+    height: calc(26px * var(--logo-scale, 1));
+    width: auto;
+    max-width: 210px; // safety cap for very wide wordmarks
+    object-fit: contain;
+    transition: transform 0.2s ease;
+  }
+
+  &:hover img {
+    transform: translateY(-2px);
+  }
+
+  // Dark-mode variant hidden by default (each logo carries both images).
+  .logo-dark {
+    display: none;
+  }
+}
+
+// Dark mode: swap to the recolored (black/gray -> white) variant. Logos without
+// a real dark_image just fall back to their normal image, so nothing vanishes.
+html[data-theme="dark"] .about-logo {
+  .logo-light {
+    display: none;
+  }
+  .logo-dark {
+    display: inline-block;
+  }
+}
+
+.about-bio {
+  font-size: 1rem;
+  line-height: 1.7;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.about-social {
+  margin-top: 1.4rem;
+
+  .contact-icons {
+    font-size: 1.3rem;
+  }
+
+  .contact-note {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--global-text-color-light);
+  }
+}
+
+/* Rotating profile photo -------------------------------------------------- */
+.about-photo {
+  flex: 0 0 300px;
+  max-width: 300px;
+  margin-left: auto;
+}
+
+.profile-rotator {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5; /* initial shape; JS resizes it to each photo (see portfolio.js) */
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--global-bg-color);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  /* smoothly animate the frame's height as it adapts to each photo */
+  transition: aspect-ratio 0.5s ease;
+
+  &.is-circular {
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+  }
+
+  .profile-rotator-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.9s ease-in-out;
+
+    &.is-active {
+      opacity: 1;
+    }
+  }
+}
+
+.about-photo .more-info {
+  margin-top: 0.7rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--global-text-color-light);
+
+  p {
+    margin: 0;
+    line-height: 1.4;
+  }
+}
+
+/* ========================================================================== */
+/* TIMELINE (About "Journey")                                                 */
+/* ========================================================================== */
+.timeline-section {
+  margin-top: 1.5rem;
+}
+
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.timeline-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  padding: 0 0 1.8rem 1.8rem;
+
+  /* the vertical line */
+  &::before {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 0.4rem;
+    bottom: -0.4rem;
+    width: 2px;
+    background: var(--global-divider-color);
+  }
+
+  &:last-child::before {
+    bottom: auto;
+    height: 0;
+  }
+
+  &.is-collapsed {
+    display: none;
+  }
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 0;
+  top: 0.35rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--global-theme-color);
+  box-shadow: 0 0 0 3px var(--global-bg-color);
+}
+
+.timeline-media {
+  flex: 0 0 96px;
+
+  img,
+  video {
+    width: 96px;
+    height: 96px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+  }
+}
+
+.timeline-content {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.timeline-date {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--global-theme-color);
+  margin-bottom: 0.25rem;
+}
+
+.timeline-title {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.timeline-more-wrap {
+  margin-top: 0.5rem;
+  padding-left: 1.8rem;
+}
+
+.timeline-more,
+.pub-link,
+.community-readmore {
+  cursor: pointer;
+}
+
+.timeline-more {
+  background: transparent;
+  border: 1px solid var(--global-divider-color);
+  color: var(--global-text-color);
+  border-radius: 20px;
+  padding: 0.45rem 1.2rem;
+  font-size: 0.9rem;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+
+  &:hover {
+    border-color: var(--global-theme-color);
+    color: var(--global-theme-color);
+  }
+
+  .timeline-more-count {
+    opacity: 0.6;
+  }
+}
+
+/* ========================================================================== */
+/* PUBLICATIONS                                                               */
+/* ========================================================================== */
+.pub-section {
+  & + & {
+    margin-top: 2.6rem; // breathing room between Publications and Projects
+  }
+
+  .section-title {
+    margin-bottom: 1.1rem;
+  }
+}
+
+.pub-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  margin-top: 0.5rem;
+}
+
+.pub-item {
+  display: flex;
+  gap: 1.4rem;
+  align-items: flex-start;
+  padding-bottom: 1.8rem;
+  border-bottom: 1px solid var(--global-divider-color);
+
+  &:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
+
+.pub-media {
+  flex: 0 0 240px;
+
+  img,
+  video {
+    width: 240px;
+    aspect-ratio: 16 / 9; // uniform 16:9 crop for every thumbnail
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    background: var(--global-card-bg-color);
+  }
+}
+
+.pub-body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.pub-title {
+  margin: 0 0 0.35rem;
+  font-size: 1.12rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.pub-authors {
+  margin: 0 0 0.25rem;
+  font-size: 0.95rem;
+  color: var(--global-text-color);
+
+  strong {
+    color: var(--global-theme-color);
+  }
+}
+
+.pub-venue {
+  margin: 0 0 0.6rem;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--global-text-color-light);
+}
+
+.pub-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.pub-link {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 0.2rem 0.7rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 5px;
+  color: var(--global-text-color);
+  transition:
+    background 0.15s ease,
+    color 0.15s ease,
+    border-color 0.15s ease;
+
+  &:hover {
+    background: var(--global-theme-color);
+    border-color: var(--global-theme-color);
+    color: var(--global-hover-text-color);
+    text-decoration: none;
+  }
+}
+
+.pub-coming-soon {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.2rem 0.7rem;
+  border-radius: 5px;
+  color: var(--global-hover-text-color);
+  background: var(--global-theme-color);
+  opacity: 0.85;
+}
+
+/* ========================================================================== */
+/* COMMUNITY                                                                  */
+/* ========================================================================== */
+.community-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-top: 0.5rem;
+}
+
+.community-item {
+  display: flex;
+  gap: 1.6rem;
+  align-items: flex-start;
+}
+
+.community-media {
+  flex: 0 0 220px;
+
+  img,
+  video {
+    width: 220px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+  }
+}
+
+.community-media-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  height: 150px;
+  border-radius: 10px;
+  border: 1px dashed var(--global-divider-color);
+  color: var(--global-theme-color);
+  font-weight: 500;
+
+  &:hover {
+    text-decoration: none;
+    border-color: var(--global-theme-color);
+  }
+}
+
+.community-body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.community-date {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--global-theme-color);
+  margin-bottom: 0.3rem;
+}
+
+.community-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.community-blurb {
+  font-size: 0.98rem;
+  line-height: 1.7;
+
+  p:last-child {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.community-readmore {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* ========================================================================== */
+/* AWARDS & HONORS (bulleted list)                                            */
+/* ========================================================================== */
+.awards-list {
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+}
+
+.awards-item {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.55rem 0 0.55rem 1.4rem;
+  border-bottom: 1px solid var(--global-divider-color);
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  /* bullet */
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0.25rem;
+    top: 1rem;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--global-theme-color);
+  }
+}
+
+.awards-name {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.awards-date {
+  flex: 0 0 auto;
+  font-size: 0.85rem;
+  color: var(--global-text-color-light);
+  white-space: nowrap;
+}
+
+/* ========================================================================== */
+/* CAREER (blog-style timeline)                                               */
+/* ========================================================================== */
+.career-list {
+  margin-top: 0.5rem;
+}
+
+.career-item {
+  display: flex;
+  gap: 1.2rem;
+  align-items: stretch;
+}
+
+.career-rail {
+  flex: 0 0 14px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--global-divider-color);
+  }
+}
+
+.career-marker {
+  position: relative;
+  z-index: 1;
+  margin-top: 0.4rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--global-theme-color);
+  box-shadow: 0 0 0 3px var(--global-bg-color);
+}
+
+.career-item:last-child .career-rail::before {
+  bottom: 0;
+  height: auto;
+}
+
+.career-content {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding-bottom: 2.6rem;
+}
+
+.career-head {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+
+.career-logo img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: var(--global-card-bg-color);
+  padding: 4px;
+  border: 1px solid var(--global-divider-color);
+}
+
+.career-date {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--global-theme-color);
+}
+
+.career-title {
+  margin: 0.1rem 0 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.career-org {
+  margin: 0.15rem 0 0;
+  color: var(--global-text-color-light);
+  font-size: 0.95rem;
+}
+
+.career-media {
+  margin: 0 0 1rem;
+}
+
+/* Rotating media slideshow (images and/or videos cross-fade).
+   Height is FIXED so the text below never jumps as slides cycle; JS reshapes
+   the WIDTH to hug each slide's aspect ratio (see portfolio.js), so portrait
+   media shrinks narrower instead of getting cropped. */
+.career-rotator {
+  position: relative;
+  height: 270px; // fixed vertical space — matches the old 480×16:9 frame
+  width: 480px; // JS resizes this per slide; fallback width if JS is off
+  max-width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--global-card-bg-color);
+  transition: width 0.45s ease;
+}
+
+.career-rotator-item {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.7s ease-in-out;
+
+  &.is-active {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .career-rotator-item {
+    transition: none;
+  }
+}
+
+.career-desc {
+  font-size: 0.98rem;
+  line-height: 1.7;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.career-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.9rem;
+}
+
+/* ========================================================================== */
+/* RESPONSIVE (mobile)                                                        */
+/* ========================================================================== */
+@media (max-width: 700px) {
+  .about-header {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .about-photo {
+    order: -1; /* photo on top on mobile */
+    margin: 0 auto;
+    flex-basis: auto;
+    width: 70%;
+    max-width: 260px;
+  }
+
+  .about-name {
+    font-size: 2.1rem;
+    text-align: center;
+  }
+
+  .about-subtitle {
+    text-align: center;
+  }
+
+  .about-logos {
+    justify-content: center;
+  }
+
+  .pub-item,
+  .community-item {
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+
+  .pub-media {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+
+  .pub-media img,
+  .pub-media video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+  }
+
+  .community-media img,
+  .community-media video,
+  .community-media-link {
+    width: 100%;
+    height: auto;
+    max-height: 220px;
+  }
+
+  .timeline-media {
+    flex-basis: 72px;
+
+    img {
+      width: 72px;
+      height: 72px;
+    }
+  }
+
+  .cv-pdf-frame {
+    height: 75vh; // shorter inline preview on small screens
+  }
+}
+
+/* ========================================================================== */
+/* CV (inline PDF preview + download links)                                   */
+/* ========================================================================== */
+.cv-pdf-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1.2rem;
+}
+
+.cv-pdf-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 1rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 6px;
+  color: var(--global-text-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease,
+    border-color 0.15s ease;
+
+  &:hover {
+    background: var(--global-theme-color);
+    border-color: var(--global-theme-color);
+    color: var(--global-hover-text-color);
+    text-decoration: none;
+  }
+}
+
+.cv-pdf-frame {
+  display: block;
+  width: 100%;
+  height: min(88vh, 1150px);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 8px;
+  background: var(--global-card-bg-color);
+}
+
+// the iframe fallback nested inside the <object> should fill it
+object.cv-pdf-frame > iframe.cv-pdf-frame {
+  height: 100%;
+  border-radius: 0;
+}
+
+.cv-pdf-fallback {
+  padding: 2rem;
+  text-align: center;
+  color: var(--global-text-color-light);
+}

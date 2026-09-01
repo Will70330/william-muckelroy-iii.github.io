@@ -1,0 +1,43 @@
+# -----------------------------------------------------------------------------
+# AWARDS & HONORS
+# -----------------------------------------------------------------------------
+# Shown as a bulleted list on the Awards page, in the order listed here
+# (newest first). Money amounts intentionally omitted.
+#
+# Each entry:
+#   name: the award/scholarship/fellowship name   (required)
+#   date: short date label shown on the right       (optional)
+# -----------------------------------------------------------------------------
+
+- name: Google Undergraduate Research Scholarship
+  date: Fall 2025
+
+- name: Stanford SERGE Fellow
+  date: Fall 2025
+
+- name: RISS Undergraduate Research Fellowship Award
+  date: Summer 2025
+
+- name: Safety21 Research Scholarship
+  date: Summer 2025
+
+- name: Texaco Foundation Scholarship
+  date: Fall 2024
+
+- name: Honeywell Corporate Scholarship
+  date: Fall 2024
+
+- name: National Society of Collegiate Scholars Geico Award
+  date: Fall 2021
+
+- name: University of Pittsburgh's Summer Research Internship Fellowship
+  date: Summer 2021
+
+- name: Lockheed Martin Corporate Scholarship
+  date: Spring 2021
+
+- name: Raytheon Technologies Scholarship
+  date: Spring 2021
+
+- name: Chevron Corporate Scholarship
+  date: Spring 2021

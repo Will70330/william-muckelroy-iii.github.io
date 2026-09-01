@@ -10,5 +10,7 @@ Gemfile.lock
 assets/libs/
 node_modules/
 vendor
+assets/img/logos/_originals/
+assets/img/misc/_originals/
 .idea
 .venv

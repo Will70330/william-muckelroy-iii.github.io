@@ -1,0 +1,17 @@
+{%- comment -%}
+  Renders a media thumbnail that is either a looping video or an image,
+  chosen automatically from the file extension.
+    include.src   — path to the asset (.mp4/.webm => <video>, else <img>)
+    include.alt   — alt / aria text
+    include.class — optional extra class(es) applied to the element
+  Videos autoplay muted+looped (like an animated GIF, but far smaller).
+{%- endcomment -%}
+{%- assign _src = include.src | strip -%}
+{%- assign _ext = _src | split: '.' | last | downcase -%}
+{%- if _ext == 'mp4' or _ext == 'webm' -%}
+  <video{% if include.class %} class="{{ include.class }}"{% endif %} autoplay loop muted playsinline preload="metadata" aria-label="{{ include.alt | escape }}">
+    <source src="{{ _src }}" type="video/{{ _ext }}" />
+  </video>
+{%- else -%}
+  <img{% if include.class %} class="{{ include.class }}"{% endif %} src="{{ _src }}" alt="{{ include.alt | escape }}" loading="lazy" />
+{%- endif -%}

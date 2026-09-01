@@ -1,0 +1,198 @@
+# -----------------------------------------------------------------------------
+# CAREER
+# -----------------------------------------------------------------------------
+# The full journey (the About timeline expanded into blog-style entries where
+# you can go into as much depth as you like). Listed newest first.
+#
+# Each entry supports:
+#   date:        date or range label                            (required)
+#   title:       role / event title                             (required)
+#   org:         organization / affiliation                     (optional)
+#   logo:        small logo shown with the entry                (optional)
+#   image:       larger thumbnail — image (.jpg/.png/.gif) or    (optional)
+#                looping video (.mp4/.webm). Use this for a SINGLE visual.
+#   media:       a LIST of images and/or videos that rotate as a  (optional)
+#                slideshow. Takes precedence over `image`. Each
+#                video plays once then advances; each photo shows
+#                for 10s then advances; then it loops. Example:
+#                  media:
+#                    - /assets/img/misc/clip.mp4
+#                    - /assets/img/misc/photo.jpg
+#   description: full markdown description (multi-paragraph ok)  (required)
+#   links:       any subset: website | code | paper | video ... (optional)
+#
+# NOTE: These entries were seeded from the About-page "Journey" timeline
+# (_data/timeline.yml). Replace each "[enter text here]" with a full,
+# in-depth write-up when you're ready.
+# -----------------------------------------------------------------------------
+
+- date: September 2026
+  title: >
+    Joining Meta as a Research Scientist II to work on robotics in world foundation models.
+  media:
+    - /assets/img/logos/meta2.png
+    - /assets/img/misc/meta-jepa.mp4
+    - /assets/img/misc/meta-jepa.mp4
+  description: >
+    Coming Soon...
+  links:
+    website: https://ai.meta.com/research/vjepa/
+
+- date: March 2026
+  title: >
+    Joined Stanford in the Interactive Perception & Robot Learning (IPRL) Lab, advised by Prof. Jeannette Bohg
+    and Dr. Cherie Ho!
+  media:
+    - /assets/img/misc/iprl1.JPG
+    - /assets/img/misc/iprl2.jpg
+    - /assets/img/misc/iprl3.jpg
+    - /assets/img/misc/messymem_thumbnail.mp4
+  description: >
+    Coming Soon...
+  links:
+    website: https://iprl.stanford.edu/
+
+- date: December 2025
+  title: >
+    Graduated from the University of Pittsburgh with my B.S. in Computer Engineering!
+  media:
+    - /assets/img/profile_pics_will/2.JPG
+    - /assets/img/profile_pics_will/3.JPG
+    - /assets/img/profile_pics_will/4.JPG
+    - /assets/img/profile_pics_will/5.JPG
+    - /assets/img/misc/ece_graduation1.jpg
+    - /assets/img/misc/ece_graduation2.jpg
+  description: >
+    Coming Soon...
+
+- date: December 2025
+  title: >
+    Won 3rd Place at the Senior Design Expo for the project I led - Paint the Canvas: 3D Gaussian Splatting for
+    Scene Reconstruction
+  media:
+    - /assets/img/misc/paint-the-canvas.mp4
+    - /assets/img/misc/sd_expo1.jpg
+    - /assets/img/misc/sd_expo2.jpg
+  description: >
+    Coming Soon...
+
+- date: October 2025
+  title: >
+    Joined Stanford's SERGE cohort '25 for prospective PhD students
+  image: /assets/img/misc/serge1.jpg
+  description: >
+    Coming Soon...
+  links:
+    website: https://engineering.stanford.edu/SERGE
+
+- date: June 2025
+  title: >
+    Joined Carnegie Mellon University under the DRIVE Lab as part of CMU's
+    Robotics Institute Summer Scholars (RISS) 10-week research program. (Selected
+    as Closing Ceremony Speaker)
+  media:
+    - /assets/img/misc/riss1.jpg
+    - /assets/img/misc/riss2.jpg
+    - /assets/img/misc/riss3.jpg
+    - /assets/img/misc/riss4.jpg
+    - /assets/img/misc/riss5.jpg
+  description: >
+    Coming Soon...
+  links:
+    paper: https://arxiv.org/abs/2509.19644
+
+- date: May 2024
+  title: >
+    Returned to Google Labs as a SWE Intern to work on adding image modality to an agentic deep research system
+  image: /assets/img/misc/deep-research.mp4
+  description: >
+    Coming Soon...
+  links:
+    website: https://gemini.google/overview/deep-research/
+
+- date: January 2024
+  title: >
+    Returned to Pitt for the Spring'24 Semester
+  image: /assets/img/misc/f1tenth.mp4
+  description: >
+    Coming Soon...
+
+- date: September 2023
+  title: >
+    Joined Amazon Lab126 as a SWE Intern working on improving home exploration of Project Astro
+  image: /assets/img/misc/astro1.mp4
+  description: >
+    Coming Soon...
+  links:
+    website: https://www.amazon.com/dp/B078NSDFSB?ref=clp_hp_h_sad&th=1
+
+- date: June 2023
+  title: >
+    Joined Google Labs as a SWE Intern working to quantify visual crosstalk in 3D lenticular displays used in Project Starline (now Google Beam) with robot arms
+  image: /assets/img/misc/starline-how-it-works.mp4
+  description: >
+    Coming Soon...
+  links:
+    website: https://blog.google/innovation-and-ai/technology/research/project-starline/
+
+- date: May 2022
+  title: >
+    Joined Tesla as a Performance Engineering intern on the Autopilot Hardware Engineering team
+  image: /assets/img/logos/tesla.png
+  description: >
+    Coming Soon...
+
+- date: October 2021
+  title: >
+    Joined the Perception subteam @ MIT-Pitt-RW to compete in the Indy Autonomous Challenge
+  # Example of the rotating slideshow: the clip plays once, then the photo
+  # shows for 10s, then it loops. Add as many images/videos as you like.
+  media:
+    - /assets/img/misc/mprw1.mp4
+    - /assets/img/misc/mprw1.jpg
+  description: >
+    Coming Soon...
+  links:
+    website: https://www.indyautonomouschallenge.com/mit-pitt-rw
+
+- date: August 2021
+  title: >
+    Elected as Pitt NSBE's Academic Excellence (AEX) Chair
+  image: /assets/img/misc/nsbeeboard1.png
+  description: >
+    Coming Soon...
+  links:
+    website: https://pittnsbe.org/index.html
+
+- date: July 2021
+  title: >
+    Served as a mentor in Pitt EXCEL's Summer Engineering Academy & TA'd in Physics & Calculus
+  description: >
+    Coming Soon...
+  links:
+    website: https://www.engineering.pitt.edu/student/programs/excel/sea2/sea/
+
+- date: July 2021
+  title: >
+    Chosen to become a Pitt EXCEL undergraduate fellow
+  image: /assets/img/logos/pitt2.png
+  description: >
+    Coming Soon...
+  links:
+    website: https://www.engineering.pitt.edu/student/programs/excel/excel/
+
+- date: May 2021
+  title: >
+    Participated in Pitt's Summer Research Internship (SRI) advised by Dr. Sam Dickerson
+  image: /assets/img/misc/ti-rslk.jpeg
+  description: >
+    Coming Soon...
+  links:
+    website: https://www.engineering.pitt.edu/student/programs/excel/summer-research-internship/
+
+- date: August 2020
+  title: >
+    Started undergraduate studies in Computer Engineering at University of Pittsburgh
+  image: /assets/img/misc/Cathedral-of-Learning-with-students.jpg
+  description: >
+    Coming Soon...
