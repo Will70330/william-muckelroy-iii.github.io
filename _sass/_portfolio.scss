@@ -487,6 +487,52 @@ html[data-theme="dark"] .about-logo {
 }
 
 /* ========================================================================== */
+/* AWARDS & HONORS (bulleted list)                                            */
+/* ========================================================================== */
+.awards-list {
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+}
+
+.awards-item {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.55rem 0 0.55rem 1.4rem;
+  border-bottom: 1px solid var(--global-divider-color);
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  /* bullet */
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0.25rem;
+    top: 1rem;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--global-theme-color);
+  }
+}
+
+.awards-name {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.awards-date {
+  flex: 0 0 auto;
+  font-size: 0.85rem;
+  color: var(--global-text-color-light);
+  white-space: nowrap;
+}
+
+/* ========================================================================== */
 /* CAREER (blog-style timeline)                                               */
 /* ========================================================================== */
 .career-list {
