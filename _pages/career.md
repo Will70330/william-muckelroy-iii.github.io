@@ -27,9 +27,27 @@ nav_order: 4
           </div>
         </header>
 
-        {% if job.image %}
-          <div class="career-media">
-            <img src="{{ job.image }}" alt="{{ job.title }}" loading="lazy" />
+        {% comment %} Media rotator: cycles through job.media (a list of images
+           and/or videos). Falls back to the single job.image. A lone video
+           loops like a GIF; multiple items cross-fade (video → on end, photo →
+           after data-photo-interval ms). See assets/js/portfolio.js. {% endcomment %}
+        {% assign media_list = job.media %}
+        {% if media_list == nil or media_list == empty %}
+          {% if job.image %}{% assign media_list = job.image | split: '|' %}{% endif %}
+        {% endif %}
+        {% if media_list and media_list != empty %}
+          <div class="career-media career-rotator" data-photo-interval="5000">
+            {% for m in media_list %}
+              {% assign m_clean = m | strip %}
+              {% assign ext = m_clean | split: '.' | last | downcase %}
+              {% if ext == 'mp4' or ext == 'webm' %}
+                <video class="career-rotator-item{% if forloop.first %} is-active{% endif %}" muted playsinline preload="metadata" aria-label="{{ job.title | escape }}">
+                  <source src="{{ m_clean }}" type="video/{{ ext }}" />
+                </video>
+              {% else %}
+                <img class="career-rotator-item{% if forloop.first %} is-active{% endif %}" src="{{ m_clean }}" alt="{{ job.title | escape }}" loading="lazy" />
+              {% endif %}
+            {% endfor %}
           </div>
         {% endif %}
 

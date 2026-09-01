@@ -15,46 +15,100 @@
 #   link:   optional "read more" / external article URL         (optional)
 # -----------------------------------------------------------------------------
 
-- title: Keynote at the RISS Closing Ceremony
-  date: August 2025
-  media:
-    type: gif
-    src: https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3gwbWF5dWY2MW5xeXZucG12b3didm1zMXAwaWR0aGFvdGN2NHBwYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sthmCnCpfr8M8jtTQy/giphy.gif
-    alt: Placeholder animation
-  blurb: >
-    Placeholder blurb about giving the closing keynote for CMU RISS. Share what
-    the talk was about, who was in the audience, and what it meant to you. This
-    is a great place to add a couple of sentences of reflection that wouldn't
-    fit on the About timeline.
-  link: https://google.com
-
-- title: Mentoring Placeholder Students in Robotics
-  date: 2024 – 2025
+- title: Presenting to Members of Congress - Council on Undergraduate Research (CUR)
+  date: October 2025 - April 2026
   media:
     type: image
-    src: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
-    alt: Placeholder image
-  blurb: >
-    Placeholder blurb describing a mentorship or outreach program you were part
-    of. Describe your role, the impact, and anything you're proud of. Replace
-    this text and swap in a real photo.
+    src: /assets/img/logos/cur.png
+  blurb:
+    Coming Soon...
+  link: https://www.cur.org/
 
-- title: Placeholder Talk / Panel / Workshop
-  date: 2024
+- title: Pitt SHPE Chapter Member
+  date: 2024 - 2026
+  media:
+    type: image
+    src: /assets/img/logos/shpe2.jpeg
+  blurb: >
+    Coming Soon...
+  link: https://www.shpepitt.org/home
+
+- title: Pitt NSBE Chapter Member
+  date: 2020 - 2026
+  media:
+    type: image
+    src: /assets/img/misc/nsb3.jpeg
+  blurb: >
+    Coming Soon...
+  link: https://pittnsbe.org/index.html
+
+- title: Pitt NSBE Chapter's Academic Excellence (AEX) Chair
+  date: July 2021 – May 2022
+  media:
+    type: image
+    src: /assets/img/misc/nsbe1.JPG
+  blurb: >
+    Coming Soon...
+  link: https://pittnsbe.org/programs-aex.html
+
+- title: Pitt EXCEL Undergraduate Fellow
+  date: July 2021 – July 2022
+  media:
+    type: image
+    src: /assets/img/misc/excel2.JPG
+  blurb: >
+    Coming Soon...
+  link: https://www.engineering.pitt.edu/student/programs/excel/excel/
+
+- title: Pitt EXCEL Summer Engineering Academy (SEA) Mentor
+  date: July 2021 – August 2021
   media:
     type: link
-    src: https://google.com
+    src: https://www.engineering.pitt.edu/student/programs/excel/sea2/sea/
   blurb: >
-    Placeholder blurb for a community talk, panel, or workshop. Use the `link`
-    media type to point at an external write-up, or switch to an image/video.
-  link: https://google.com
+    Coming Soon...
+  link: https://www.engineering.pitt.edu/student/programs/excel/sea2/sea/
 
-- title: Volunteering With a Placeholder Community Organization
-  date: 2023
-  media:
-    type: image
-    src: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
-    alt: Placeholder image
-  blurb: >
-    Placeholder blurb about volunteer work or community service. Explain what
-    you did and why it mattered.
+# - title: Keynote at the RISS Closing Ceremony
+#   date: August 2025
+#   media:
+#     type: gif
+#     src: 
+#     alt: Placeholder animation
+#   blurb: >
+#     Placeholder blurb about giving the closing keynote for CMU RISS. Share what
+#     the talk was about, who was in the audience, and what it meant to you. This
+#     is a great place to add a couple of sentences of reflection that wouldn't
+#     fit on the About timeline.
+#   link: https://google.com
+
+# - title: Mentoring Placeholder Students in Robotics
+#   date: 2024 – 2025
+#   media:
+#     type: image
+#     src: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
+#     alt: Placeholder image
+#   blurb: >
+#     Placeholder blurb describing a mentorship or outreach program you were part
+#     of. Describe your role, the impact, and anything you're proud of. Replace
+#     this text and swap in a real photo.
+
+# - title: Placeholder Talk / Panel / Workshop
+#   date: 2024
+#   media:
+#     type: link
+#     src: https://google.com
+#   blurb: >
+#     Placeholder blurb for a community talk, panel, or workshop. Use the `link`
+#     media type to point at an external write-up, or switch to an image/video.
+#   link: https://google.com
+
+# - title: Volunteering With a Placeholder Community Organization
+#   date: 2023
+#   media:
+#     type: image
+#     src: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
+#     alt: Placeholder image
+#   blurb: >
+#     Placeholder blurb about volunteer work or community service. Explain what
+#     you did and why it mattered.

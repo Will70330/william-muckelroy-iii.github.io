@@ -97,7 +97,7 @@ layout: default
               {% if item.image %}
                 <div class="timeline-media">
                   {% if item.url %}<a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{% endif %}
-                  <img src="{{ item.image }}" alt="{{ item.date }}" loading="lazy" />
+                  {% include portfolio_media.liquid src=item.image alt=item.date %}
                   {% if item.url %}</a>{% endif %}
                 </div>
               {% endif %}

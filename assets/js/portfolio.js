@@ -133,8 +133,196 @@
     });
   }
 
+  /* ------------------------------------------------------------------ */
+  /* 3. Career media rotator (images and/or videos)                     */
+  /* ------------------------------------------------------------------ */
+  // Each `.career-rotator` holds one or more `.career-rotator-item`s (img/video).
+  // Cycle rule: a video advances when it ENDS; a photo advances after
+  // `data-photo-interval` ms (default 10s). A lone video just loops like a GIF.
+  // Width the frame is allowed to take at its fixed height, expressed as
+  // aspect-ratio (w/h) clamps. Landscape ceiling ≈16:9 (matches the old frame);
+  // portrait floor keeps very tall photos from becoming skinny slivers — those
+  // instead crop a little off the top/bottom (object-fit: cover).
+  const CAREER_AR_MIN = 0.72; //  tallest portrait before top/bottom crops
+  const CAREER_AR_MAX = 1.78; //  widest landscape before sides crop
+
+  function initCareerRotators() {
+    document.querySelectorAll(".career-rotator").forEach(function (rotator) {
+      const items = Array.prototype.slice.call(rotator.querySelectorAll(".career-rotator-item"));
+      if (items.length === 0) return;
+
+      const photoInterval = parseInt(rotator.getAttribute("data-photo-interval"), 10) || 10000;
+
+      // Natural aspect ratio (w/h) of an item, or null if not measurable yet.
+      function aspectOf(item) {
+        if (item.tagName === "VIDEO") {
+          return item.videoWidth && item.videoHeight ? item.videoWidth / item.videoHeight : null;
+        }
+        return item.naturalWidth && item.naturalHeight ? item.naturalWidth / item.naturalHeight : null;
+      }
+
+      // Resize the (fixed-height) frame's WIDTH to hug this slide's shape.
+      let framePrimed = false;
+      function fitFrame(item) {
+        const ar = aspectOf(item);
+        if (!ar) return;
+        const h = rotator.clientHeight || 270;
+        const clamped = Math.max(CAREER_AR_MIN, Math.min(CAREER_AR_MAX, ar));
+        rotator.style.width = Math.round(h * clamped) + "px";
+        // Suppress the width transition on the very first sizing (no load jump),
+        // then hand animation back to the stylesheet for subsequent slides.
+        if (!framePrimed) {
+          framePrimed = true;
+          window.requestAnimationFrame(function () {
+            rotator.style.transition = "";
+          });
+        }
+      }
+
+      // Fit now if the media is measured, otherwise once it loads (if still shown).
+      function fitWhenReady(item, isCurrent) {
+        if (aspectOf(item)) {
+          fitFrame(item);
+          return;
+        }
+        const ev = item.tagName === "VIDEO" ? "loadedmetadata" : "load";
+        item.addEventListener(
+          ev,
+          function () {
+            if (isCurrent()) fitFrame(item);
+          },
+          { once: true }
+        );
+      }
+
+      // Don't animate the first width set.
+      rotator.style.transition = "none";
+
+      // Single item: nothing to rotate — a lone video loops like an animated GIF.
+      if (items.length === 1) {
+        const only = items[0];
+        only.classList.add("is-active");
+        fitWhenReady(only, function () {
+          return true;
+        });
+        if (only.tagName === "VIDEO") {
+          only.loop = true;
+          if (!prefersReducedMotion) only.play().catch(function () {});
+        }
+        return;
+      }
+
+      let current = 0;
+      let advanceTimer = null; // used for photo dwell AND video safety net
+
+      function clearTimer() {
+        if (advanceTimer) {
+          window.clearTimeout(advanceTimer);
+          advanceTimer = null;
+        }
+      }
+
+      function deactivate(item) {
+        item.classList.remove("is-active");
+        if (item.tagName === "VIDEO") {
+          try {
+            item.pause();
+            item.currentTime = 0;
+          } catch (e) {}
+        }
+      }
+
+      function activate(item) {
+        item.classList.add("is-active");
+        fitWhenReady(item, function () {
+          return items[current] === item;
+        });
+        if (item.tagName === "VIDEO") {
+          try {
+            item.currentTime = 0;
+          } catch (e) {}
+          const play = item.play();
+          if (play && play.catch) {
+            // Autoplay blocked (e.g. mobile data-saver): don't get stuck —
+            // treat this slide like a photo and move on after the interval.
+            play.catch(function () {
+              clearTimer();
+              advanceTimer = window.setTimeout(advance, photoInterval);
+            });
+          }
+          // Safety net: if 'ended' never fires (background tab, decode stall),
+          // advance a couple seconds past the clip's duration.
+          function armSafety() {
+            const secs = isFinite(item.duration) && item.duration > 0 ? item.duration + 2 : 20;
+            clearTimer();
+            advanceTimer = window.setTimeout(advance, secs * 1000);
+          }
+          if (isFinite(item.duration) && item.duration > 0) armSafety();
+          else item.addEventListener("loadedmetadata", armSafety, { once: true });
+        } else {
+          // Photo: hold for photoInterval, then advance.
+          clearTimer();
+          advanceTimer = window.setTimeout(advance, photoInterval);
+        }
+      }
+
+      function advance() {
+        clearTimer();
+        deactivate(items[current]);
+        current = (current + 1) % items.length;
+        activate(items[current]);
+      }
+
+      // A video advances the moment it finishes (if it's still the active slide).
+      items.forEach(function (item) {
+        if (item.tagName === "VIDEO") {
+          item.loop = false;
+          item.addEventListener("ended", function () {
+            if (items[current] === item) advance();
+          });
+        }
+      });
+
+      if (prefersReducedMotion) {
+        // Show the first slide statically; no auto-advance, no autoplay.
+        items[0].classList.add("is-active");
+        return;
+      }
+
+      // Pause the cycle while hovered, resume on leave.
+      let hovered = false;
+      rotator.addEventListener("mouseenter", function () {
+        hovered = true;
+        clearTimer();
+        const cur = items[current];
+        if (cur.tagName === "VIDEO") {
+          try {
+            cur.pause();
+          } catch (e) {}
+        }
+      });
+      rotator.addEventListener("mouseleave", function () {
+        if (!hovered) return;
+        hovered = false;
+        const cur = items[current];
+        if (cur.tagName === "VIDEO") {
+          cur.play().catch(function () {});
+        } else {
+          advanceTimer = window.setTimeout(advance, photoInterval);
+        }
+      });
+
+      // Make sure only the first slide is visible, then start.
+      items.forEach(function (item, i) {
+        if (i !== 0) item.classList.remove("is-active");
+      });
+      activate(items[current]);
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     initProfileRotator();
     initTimeline();
+    initCareerRotators();
   });
 })();

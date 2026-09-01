@@ -9,66 +9,190 @@
 #   title:       role / event title                             (required)
 #   org:         organization / affiliation                     (optional)
 #   logo:        small logo shown with the entry                (optional)
-#   image:       larger thumbnail / GIF for the entry            (optional)
+#   image:       larger thumbnail — image (.jpg/.png/.gif) or    (optional)
+#                looping video (.mp4/.webm). Use this for a SINGLE visual.
+#   media:       a LIST of images and/or videos that rotate as a  (optional)
+#                slideshow. Takes precedence over `image`. Each
+#                video plays once then advances; each photo shows
+#                for 10s then advances; then it loops. Example:
+#                  media:
+#                    - /assets/img/misc/clip.mp4
+#                    - /assets/img/misc/photo.jpg
 #   description: full markdown description (multi-paragraph ok)  (required)
 #   links:       any subset: website | code | paper | video ... (optional)
+#
+# NOTE: These entries were seeded from the About-page "Journey" timeline
+# (_data/timeline.yml). Replace each "[enter text here]" with a full,
+# in-depth write-up when you're ready.
 # -----------------------------------------------------------------------------
 
-- date: August 2025
-  title: RISS Closing Keynote Speaker
-  org: Carnegie Mellon University — Robotics Institute
-  logo: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
-  image: https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3gwbWF5dWY2MW5xeXZucG12b3didm1zMXAwaWR0aGFvdGN2NHBwYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sthmCnCpfr8M8jtTQy/giphy.gif
+- date: September 2026
+  title: >
+    Joining Meta as a Research Scientist II to work on robotics in world foundation models.
+  media:
+    - /assets/img/logos/meta2.png
+    - /assets/img/misc/meta-jepa.mp4
+    - /assets/img/misc/meta-jepa.mp4
   description: >
-    Placeholder, in-depth description of being selected as the final keynote
-    speaker for the closing ceremony of CMU's Robotics Institute Summer Scholars
-    program. This is your space to expand well beyond the one-line About
-    timeline — talk about the journey that led here, what you presented, and the
-    lessons you took away. Markdown works, so you can use **bold**, *italics*,
-    and [links](https://google.com).
+    Coming Soon...
   links:
-    website: https://google.com
-    video: https://google.com
+    website: https://ai.meta.com/research/vjepa/
 
-- date: June 2025 – August 2025
-  title: Robotics Institute Summer Scholar (RISS)
-  org: Carnegie Mellon University — DRIVE Lab
-  logo: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
-  image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
+- date: March 2026
+  title: >
+    Joined Stanford in the Interactive Perception & Robot Learning (IPRL) Lab, advised by Prof. Jeannette Bohg
+    and Dr. Cherie Ho!
+  media:
+    - /assets/img/misc/iprl1.JPG
+    - /assets/img/misc/iprl2.jpg
+    - /assets/img/misc/iprl3.jpg
+    - /assets/img/misc/messymem_thumbnail.mp4
   description: >
-    Placeholder description of joining CMU under the DRIVE Lab as part of the
-    RISS program. Describe the research problem you worked on, the methods and
-    tools you used, your mentors, and the outcomes. Add as much detail as you'd
-    like here — this section is meant to hold what your CV and About page can't.
+    Coming Soon...
   links:
-    website: https://google.com
-    code: https://google.com
+    website: https://iprl.stanford.edu/
 
-- date: January 2025 – May 2025
-  title: Undergraduate Research Assistant
-  org: Placeholder University — Placeholder Lab
-  logo: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
-  image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
+- date: December 2025
+  title: >
+    Graduated from the University of Pittsburgh with my B.S. in Computer Engineering!
+  media:
+    - /assets/img/profile_pics_will/2.JPG
+    - /assets/img/profile_pics_will/3.JPG
+    - /assets/img/profile_pics_will/4.JPG
+    - /assets/img/profile_pics_will/5.JPG
+    - /assets/img/misc/ece_graduation1.jpg
+    - /assets/img/misc/ece_graduation2.jpg
   description: >
-    Placeholder description of a research assistantship. Replace with the real
-    project scope, your contributions, and results.
+    Coming Soon...
 
-- date: Summer 2024
-  title: Placeholder Internship
-  org: Placeholder Company
-  logo: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
-  image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
+- date: December 2025
+  title: >
+    Won 3rd Place at the Senior Design Expo for the project I led - Paint the Canvas: 3D Gaussian Splatting for
+    Scene Reconstruction
+  media:
+    - /assets/img/misc/paint-the-canvas.mp4
+    - /assets/img/misc/sd_expo1.jpg
+    - /assets/img/misc/sd_expo2.jpg
   description: >
-    Placeholder description of a summer internship. What team were you on, what
-    did you build, and what did you learn?
+    Coming Soon...
+
+- date: October 2025
+  title: >
+    Joined Stanford's SERGE cohort '25 for prospective PhD students
+  image: /assets/img/misc/serge1.jpg
+  description: >
+    Coming Soon...
   links:
-    website: https://google.com
+    website: https://engineering.stanford.edu/SERGE
 
-- date: September 2022 – Present
-  title: B.S. in Placeholder Major
-  org: Placeholder University
-  logo: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
-  image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
+- date: June 2025
+  title: >
+    Joined Carnegie Mellon University under the DRIVE Lab as part of CMU's
+    Robotics Institute Summer Scholars (RISS) 10-week research program. (Selected
+    as Closing Ceremony Speaker)
+  media:
+    - /assets/img/misc/riss1.jpg
+    - /assets/img/misc/riss2.jpg
+    - /assets/img/misc/riss3.jpg
+    - /assets/img/misc/riss4.jpg
+    - /assets/img/misc/riss5.jpg
   description: >
-    Placeholder description of your undergraduate studies — major, focus areas,
-    honors, and activities. This is the earliest entry in the journey.
+    Coming Soon...
+  links:
+    paper: https://arxiv.org/abs/2509.19644
+
+- date: May 2024
+  title: >
+    Returned to Google Labs as a SWE Intern to work on adding image modality to an agentic deep research system
+  image: /assets/img/misc/deep-research.mp4
+  description: >
+    Coming Soon...
+  links:
+    website: https://gemini.google/overview/deep-research/
+
+- date: January 2024
+  title: >
+    Returned to Pitt for the Spring'24 Semester
+  image: /assets/img/misc/f1tenth.mp4
+  description: >
+    Coming Soon...
+
+- date: September 2023
+  title: >
+    Joined Amazon Lab126 as a SWE Intern working on improving home exploration of Project Astro
+  image: /assets/img/misc/astro1.mp4
+  description: >
+    Coming Soon...
+  links:
+    website: https://www.amazon.com/dp/B078NSDFSB?ref=clp_hp_h_sad&th=1
+
+- date: June 2023
+  title: >
+    Joined Google Labs as a SWE Intern working to quantify visual crosstalk in 3D lenticular displays used in Project Starline (now Google Beam) with robot arms
+  image: /assets/img/misc/starline-how-it-works.mp4
+  description: >
+    Coming Soon...
+  links:
+    website: https://blog.google/innovation-and-ai/technology/research/project-starline/
+
+- date: May 2022
+  title: >
+    Joined Tesla as a Performance Engineering intern on the Autopilot Hardware Engineering team
+  image: /assets/img/logos/tesla.png
+  description: >
+    Coming Soon...
+
+- date: October 2021
+  title: >
+    Joined the Perception subteam @ MIT-Pitt-RW to compete in the Indy Autonomous Challenge
+  # Example of the rotating slideshow: the clip plays once, then the photo
+  # shows for 10s, then it loops. Add as many images/videos as you like.
+  media:
+    - /assets/img/misc/mprw1.mp4
+    - /assets/img/misc/mprw1.jpg
+  description: >
+    Coming Soon...
+  links:
+    website: https://www.indyautonomouschallenge.com/mit-pitt-rw
+
+- date: August 2021
+  title: >
+    Elected as Pitt NSBE's Academic Excellence (AEX) Chair
+  image: /assets/img/misc/nsbeeboard1.png
+  description: >
+    Coming Soon...
+  links:
+    website: https://pittnsbe.org/index.html
+
+- date: July 2021
+  title: >
+    Served as a mentor in Pitt EXCEL's Summer Engineering Academy & TA'd in Physics & Calculus
+  description: >
+    Coming Soon...
+  links:
+    website: https://www.engineering.pitt.edu/student/programs/excel/sea2/sea/
+
+- date: July 2021
+  title: >
+    Chosen to become a Pitt EXCEL undergraduate fellow
+  image: /assets/img/logos/pitt2.png
+  description: >
+    Coming Soon...
+  links:
+    website: https://www.engineering.pitt.edu/student/programs/excel/excel/
+
+- date: May 2021
+  title: >
+    Participated in Pitt's Summer Research Internship (SRI) advised by Dr. Sam Dickerson
+  image: /assets/img/misc/ti-rslk.jpeg
+  description: >
+    Coming Soon...
+  links:
+    website: https://www.engineering.pitt.edu/student/programs/excel/summer-research-internship/
+
+- date: August 2020
+  title: >
+    Started undergraduate studies in Computer Engineering at University of Pittsburgh
+  image: /assets/img/misc/Cathedral-of-Learning-with-students.jpg
+  description: >
+    Coming Soon...

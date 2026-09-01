@@ -15,70 +15,103 @@
 # Add real thumbnails to assets/img/ and point `image:` at them later.
 # -----------------------------------------------------------------------------
 
-- date: August 2025
+- date: Septemeber 2026
   title: >
-    Presented as the final keynote speaker for the closing ceremony of Carnegie
-    Mellon University's (CMU) Robotics Institute Summer Scholars (RISS) program.
-  image: https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3gwbWF5dWY2MW5xeXZucG12b3didm1zMXAwaWR0aGFvdGN2NHBwYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sthmCnCpfr8M8jtTQy/giphy.gif
-  url: https://google.com
+    Joining Meta as a Research Scientist II to work on robotics in world foundation models.
+  image: /assets/img/logos/meta2.png
+  url: https://ai.meta.com/research/vjepa/
+
+- date: March 2026
+  title: >
+    Joined Stanford in the Interactive Perception & Robot Learning (IPRL) Lab, advised by Prof. Jeannette Bohg
+    and Dr. Cherie Ho!
+  image: /assets/img/misc/iprl1.JPG
+  url: https://iprl.stanford.edu/
+
+- date: December 2025
+  title: >
+    Graduated from the University of Pittsburgh with my B.S. in Computer Engineering!
+  image: /assets/img/profile_pics_will/2.JPG
+
+- date: December 2025
+  title: >
+    Won 3rd Place at the Senior Design Expo for the project I led - Paint the Canvas: 3D Gaussian Splatting for
+    Scene Reconstruction
+  image: /assets/img/misc/paint-the-canvas.mp4
+
+- date: October 2025
+  title: >
+    Joined Stanford's SERGE cohort '25 for prospective PhD students
+  image: /assets/img/misc/serge1.jpg
+  url: https://engineering.stanford.edu/SERGE
 
 - date: June 2025
   title: >
     Joined Carnegie Mellon University under the DRIVE Lab as part of CMU's
-    Robotics Institute Summer Scholars (RISS) program.
-  image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
-  url: https://google.com
+    Robotics Institute Summer Scholars (RISS) 10-week research program. (Selected
+    as Closing Ceremony Speaker)
+  image: /assets/img/misc/riss1.jpg
+  url: https://arxiv.org/abs/2509.19644
 
-- date: May 2025
+- date: May 2024
   title: >
-    Received a placeholder award for outstanding undergraduate research. Replace
-    this text with a real milestone.
-  image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
+    Returned to Google Labs as a SWE Intern to work on adding image modality to an agentic deep research system
+  image: /assets/img/misc/deep-research.mp4
+  url: https://gemini.google/overview/deep-research/
 
-- date: March 2025
+- date: January 2024
   title: >
-    Presented a placeholder poster at a placeholder undergraduate research
-    symposium.
-  image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
-  url: https://google.com
+    Returned to Pitt for the Spring'24 Semester
+  image: /assets/img/misc/f1tenth.mp4
 
-- date: January 2025
+- date: September 2023
   title: >
-    Began a placeholder research assistantship in a placeholder robotics lab.
-  image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
+    Joined Amazon Lab126 as a SWE Intern working on improving home exploration of Project Astro
+  image: /assets/img/misc/astro1.mp4
+  url: https://www.amazon.com/dp/B078NSDFSB?ref=clp_hp_h_sad&th=1
 
-- date: September 2024
+- date: June 2023
   title: >
-    Started a placeholder leadership role in a placeholder student organization.
-  image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
+    Joined Google Labs as a SWE Intern working to quantify visual crosstalk in 3D lenticular displays used in Project Starline (now Google Beam) with robot arms
+  image: /assets/img/misc/starline-how-it-works.mp4
+  url: https://blog.google/innovation-and-ai/technology/research/project-starline/
 
-- date: June 2024
+- date: May 2022
   title: >
-    Completed a placeholder summer internship at a placeholder company.
-  image: https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3gwbWF5dWY2MW5xeXZucG12b3didm1zMXAwaWR0aGFvdGN2NHBwYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sthmCnCpfr8M8jtTQy/giphy.gif
-  url: https://google.com
+    Joined Tesla as a Performance Engineering intern on the Autopilot Hardware Engineering team
+  image: /assets/img/logos/tesla.png
 
-- date: March 2024
+- date: October 2021
   title: >
-    Earned a placeholder scholarship recognizing placeholder achievement.
-  image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
+    Joined the Perception subteam @ MIT-Pitt-RW to compete in the Indy Autonomous Challenge
+  image: /assets/img/misc/mprw1.jpg
+  url: https://www.indyautonomouschallenge.com/mit-pitt-rw
 
-- date: December 2023
+- date: August 2021
   title: >
-    Placeholder milestone — describe a project, publication, or competition here.
-  image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
+    Elected as Pitt NSBE's Academic Excellence (AEX) Chair
+  image: /assets/img/misc/nsbeeboard1.png
+  url: https://pittnsbe.org/index.html
 
-- date: August 2023
+- date: July 2021
   title: >
-    Placeholder milestone — another step in the journey worth remembering.
-  image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
+    Served as a mentor in Pitt EXCEL's Summer Engineering Academy & TA'd in Physics & Calculus
+  # image: 
+  url: https://www.engineering.pitt.edu/student/programs/excel/sea2/sea/
 
-- date: May 2023
+- date: July 2021
   title: >
-    Placeholder milestone — the beginning of the story you want to tell.
-  image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
+    Chosen to become a Pitt EXCEL undergraduate fellow
+  image: assets/img/logos/pitt2.png
+  url: https://www.engineering.pitt.edu/student/programs/excel/excel/
 
-- date: September 2022
+- date: May 2021
   title: >
-    Started at a placeholder university / program — the earliest entry.
-  image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYn44doRsxipf0fdf3uhyH4HdR5Iz_WPYSXmireTnywg&s
+    Participated in Pitt's Summer Research Internship (SRI) advised by Dr. Sam Dickerson
+  image: /assets/img/misc/ti-rslk.jpeg
+  url: https://www.engineering.pitt.edu/student/programs/excel/summer-research-internship/
+
+- date: August 2020
+  title: >
+    Started undergraduate studies in Computer Engineering at University of Pittsburgh
+  image: /assets/img/misc/Cathedral-of-Learning-with-students.jpg
