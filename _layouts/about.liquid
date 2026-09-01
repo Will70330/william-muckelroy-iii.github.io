@@ -33,7 +33,7 @@ layout: default
                 title="{{ logo.name }}"
                 aria-label="{{ logo.name }}"
                 {% if logo.scale %}
-                  style="--logo-scale: {{ logo.scale }}"
+                  style="--logo-h: {{ logo.scale | times: 26.0 | round: 2 }}px"
                 {% endif %}
               >
                 <img class="logo-light" src="{{ logo.image }}" alt="{{ logo.name }}" loading="lazy">

@@ -65,8 +65,11 @@
   img {
     // Uniform height for every logo (images are pre-trimmed of whitespace,
     // so equal height reads as equal size). Per-logo `scale` (from logos.yml)
-    // shrinks very wide wordmarks like MPRW.
-    height: calc(26px * var(--logo-scale, 1));
+    // shrinks very wide wordmarks like MPRW; the template precomputes the px
+    // height into `--logo-h`. NOTE: do NOT use `calc(... * var(...))` here —
+    // the production CSS minifier (jekyll-minifier) mangles a custom property
+    // inside calc() and drops the rule, blowing the logos up to full size.
+    height: var(--logo-h, 26px);
     width: auto;
     max-width: 210px; // safety cap for very wide wordmarks
     object-fit: contain;
