@@ -22,12 +22,24 @@
       {% if pub.coming_soon %}
         <span class="pub-coming-soon">Coming Soon…</span>
       {% endif %}
-      {% if pub.links.paper %}<a class="pub-link" href="{{ pub.links.paper }}" target="_blank" rel="noopener noreferrer">Paper</a>{% endif %}
-      {% if pub.links.code %}<a class="pub-link" href="{{ pub.links.code }}" target="_blank" rel="noopener noreferrer">Code</a>{% endif %}
-      {% if pub.links.video %}<a class="pub-link" href="{{ pub.links.video }}" target="_blank" rel="noopener noreferrer">Video</a>{% endif %}
-      {% if pub.links.poster %}<a class="pub-link" href="{{ pub.links.poster }}" target="_blank" rel="noopener noreferrer">Poster</a>{% endif %}
-      {% if pub.links.website %}<a class="pub-link" href="{{ pub.links.website }}" target="_blank" rel="noopener noreferrer">Website</a>{% endif %}
-      {% if pub.links.bib %}<a class="pub-link" href="{{ pub.links.bib }}" target="_blank" rel="noopener noreferrer">Bib</a>{% endif %}
+      {% if pub.links.paper -%}
+        <a class="pub-link" href="{{ pub.links.paper }}" target="_blank" rel="noopener noreferrer">Paper</a>
+      {%- endif %}
+      {% if pub.links.code -%}
+        <a class="pub-link" href="{{ pub.links.code }}" target="_blank" rel="noopener noreferrer">Code</a>
+      {%- endif %}
+      {% if pub.links.video -%}
+        <a class="pub-link" href="{{ pub.links.video }}" target="_blank" rel="noopener noreferrer">Video</a>
+      {%- endif %}
+      {% if pub.links.poster -%}
+        <a class="pub-link" href="{{ pub.links.poster }}" target="_blank" rel="noopener noreferrer">Poster</a>
+      {%- endif %}
+      {% if pub.links.website -%}
+        <a class="pub-link" href="{{ pub.links.website }}" target="_blank" rel="noopener noreferrer">Website</a>
+      {%- endif %}
+      {% if pub.links.bib -%}
+        <a class="pub-link" href="{{ pub.links.bib }}" target="_blank" rel="noopener noreferrer">Bib</a>
+      {%- endif %}
     </div>
   </div>
 </div>

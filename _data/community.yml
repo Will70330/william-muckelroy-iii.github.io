@@ -20,8 +20,7 @@
   media:
     type: image
     src: /assets/img/logos/cur.png
-  blurb:
-    Coming Soon...
+  blurb: Coming Soon...
   link: https://www.cur.org/
 
 - title: Pitt SHPE Chapter Member
@@ -68,12 +67,11 @@
   blurb: >
     Coming Soon...
   link: https://www.engineering.pitt.edu/student/programs/excel/sea2/sea/
-
 # - title: Keynote at the RISS Closing Ceremony
 #   date: August 2025
 #   media:
 #     type: gif
-#     src: 
+#     src:
 #     alt: Placeholder animation
 #   blurb: >
 #     Placeholder blurb about giving the closing keynote for CMU RISS. Share what

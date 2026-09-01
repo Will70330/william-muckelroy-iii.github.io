@@ -9,7 +9,9 @@ layout: default
       <div class="about-intro">
         <h1 class="about-name">
           {% if site.title == 'blank' %}
-            <span class="font-weight-bold">{{ site.first_name }}</span>{% if site.middle_name %} {{ site.middle_name }}{% endif %} {{ site.last_name }}
+            <span class="font-weight-bold">{{ site.first_name }}</span>
+            {%- if site.middle_name %} {{ site.middle_name }}{% endif %}
+            {{ site.last_name }}
           {% else %}
             {{ site.title }}
           {% endif %}
@@ -30,10 +32,12 @@ layout: default
                 rel="noopener noreferrer"
                 title="{{ logo.name }}"
                 aria-label="{{ logo.name }}"
-                {% if logo.scale %}style="--logo-scale: {{ logo.scale }}"{% endif %}
+                {% if logo.scale %}
+                  style="--logo-scale: {{ logo.scale }}"
+                {% endif %}
               >
-                <img class="logo-light" src="{{ logo.image }}" alt="{{ logo.name }}" loading="lazy" />
-                <img class="logo-dark" src="{{ logo.dark_image | default: logo.image }}" alt="{{ logo.name }}" loading="lazy" />
+                <img class="logo-light" src="{{ logo.image }}" alt="{{ logo.name }}" loading="lazy">
+                <img class="logo-dark" src="{{ logo.dark_image | default: logo.image }}" alt="{{ logo.name }}" loading="lazy">
               </a>
             {% endfor %}
           </div>
@@ -57,7 +61,7 @@ layout: default
       {% if page.profile %}
         <div class="about-photo">
           {% assign profile_images = page.profile.images %}
-          {% if profile_images == nil or profile_images.size == 0 %}
+          {% if profile_images == null or profile_images.size == 0 %}
             {% assign profile_images = page.profile.image | split: '|' %}
           {% endif %}
           {% assign wide_images = page.profile.wide_images %}
@@ -72,8 +76,10 @@ layout: default
                 src="{{ img_clean | prepend: '/assets/img/' | relative_url }}"
                 alt="{{ site.first_name }} {{ site.last_name }}"
                 loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
-                {% if wide_images and wide_images contains img_clean %}data-wide="true"{% endif %}
-              />
+                {% if wide_images and wide_images contains img_clean %}
+                  data-wide="true"
+                {% endif %}
+              >
             {% endfor %}
           </div>
           {% if page.profile.more_info %}

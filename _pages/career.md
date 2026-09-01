@@ -7,7 +7,7 @@ nav: true
 nav_order: 4
 ---
 
-{% comment %} Data lives in _data/career.yml {% endcomment %}
+{% comment %} Data lives in \_data/career.yml {% endcomment %}
 
 <div class="career-list">
   {% for job in site.data.career %}
@@ -63,5 +63,7 @@ nav_order: 4
         {% endif %}
       </div>
     </article>
-  {% endfor %}
+
+{% endfor %}
+
 </div>
