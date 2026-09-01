@@ -7,7 +7,7 @@ nav: true
 nav_order: 5
 ---
 
-{% comment %} Data lives in _data/awards.yml — listed in file order. {% endcomment %}
+{% comment %} Data lives in \_data/awards.yml — listed in file order. {% endcomment %}
 
 <ul class="awards-list">
   {% for award in site.data.awards %}

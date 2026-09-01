@@ -52,7 +52,7 @@ profile:
 # Timeline (data in _data/timeline.yml)
 timeline_title: Journey
 timeline_initial: 7 # items shown before "See more"
-timeline_batch: 5   # items revealed per "See more" click
+timeline_batch: 5 # items revealed per "See more" click
 
 social: true # show social icons under the bio
 ---
@@ -72,8 +72,6 @@ to LiDAR using 4D Radar and Deep Learning for Autonomous Vehicles.
 Next, I will be applying for PhD programs while continuing to work within IPRL part-time
 and starting full-time as a Research Scientist II working on World Foundation models for
 robotics.
-
-
 
 <!-- Write your biography here. This is placeholder text — replace it with a few short
 paragraphs about who you are, what you research, and what drives you.

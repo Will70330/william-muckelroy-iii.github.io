@@ -7,7 +7,7 @@ nav: true
 nav_order: 3
 ---
 
-{% comment %} Data lives in _data/community.yml {% endcomment %}
+{% comment %} Data lives in \_data/community.yml {% endcomment %}
 
 <div class="community-list">
   {% for post in site.data.community %}

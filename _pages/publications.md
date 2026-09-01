@@ -8,9 +8,9 @@ nav_order: 2
 ---
 
 {% comment %}
-  Data lives in _data/publications.yml — no search/filter, listed in file order.
-  Each entry has `type: publication` or `type: project`; anything without a
-  type falls back into Publications.
+Data lives in \_data/publications.yml — no search/filter, listed in file order.
+Each entry has `type: publication` or `type: project`; anything without a
+type falls back into Publications.
 {% endcomment %}
 
 {% assign projects = site.data.publications | where: "type", "project" %}
