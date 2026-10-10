@@ -5,7 +5,7 @@ permalink: /
 # Note: do NOT add `nav: true` here — the navbar already includes a built-in
 # "About" link for the home page, so enabling nav would show it twice.
 # subtitle: B.S. Computer Engineering from Pitt, Post-Bacc @ <a href='https://drive-lab-cmu.github.io/'>CMU's DRIVE Lab</a> | <a href='https://iprl.stanford.edu/'>Stanford's IPRL Lab</a>
-subtitle: B.S. Computer Engineering from Pitt, Post-Bacc @ <a href='https://iprl.stanford.edu/'>Stanford's IPRL Lab</a> | Research Scientist II @ Meta FAIR
+subtitle: B.S. Computer Engineering from Pitt, Post-Bacc @ <a href='https://iprl.stanford.edu/'>Stanford's IPRL Lab</a> | Research Scientist II @ <a href='https://ai.meta.com/research/'>Meta FAIR</a>
 
 profile:
   # Rotating profile photos — the page cycles through these in this order.
